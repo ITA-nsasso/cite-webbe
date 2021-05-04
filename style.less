@@ -1,0 +1,120 @@
+@pinku: #FDB0AA;
+@cyberblu: #1F51FF;
+
+body {
+    background-color: @pinku;
+}
+
+h1 {
+    color: green;
+    font-size: 72px;
+}
+
+.scroll-left {
+    height: 100px;	
+    overflow: hidden;
+    position: relative;
+    margin: 5px 0px;
+    // background: yellow;
+    // color: orange;
+    // border: 1px solid orange;
+}
+
+.scroll-left h1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 100px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+}
+
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    0%   {
+        transform: translateX(90%); 		
+    }
+    100% {
+        transform: translateX(-90%); 
+    }
+}
+
+.kitkat {
+    margin: 10px 0;
+    background-color: #606060;
+    color:@pinku;
+    text-align: center;
+    
+    border-collapse: collapse;
+    th, td {
+        border: solid 1px black;
+        padding: 4px;
+    }
+}
+
+button {
+    color: @cyberblu;
+    border-radius: 2px;
+    border-color: @cyberblu;
+}
+
+.chats {
+    margin-left: 25%;
+    max-width: 250%;
+}
+
+@media screen and (max-width: 1280px){
+    body {
+        background-color: crimson;
+        margin-left: 12.5%;
+    }
+
+    h1 {font-size: 52px;}
+
+    .chats {
+        margin-left: 12.5%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    body {
+        background-color: chartreuse;
+        
+    }
+
+    h1 {font-size: 42px;}
+
+    .chats {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 767px){
+    body {
+        background-color: chocolate;
+        
+    }
+
+    h1 {font-size: 26px;}
+
+    .chats {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    body {
+        background-color: aqua;
+
+    }
+
+    h1 {font-size: 22px;}
+
+    .chats {
+        margin-left: 0;
+    }
+}
